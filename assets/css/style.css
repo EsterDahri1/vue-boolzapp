@@ -30,8 +30,28 @@ body{
     width: 70%;
 }
 
+.userProfile{
+    height: 50px;
+}
+
 img{
-    width: 50px;
+    width: 30px;
     aspect-ratio: 1 / 1;
-    margin: 0.5rem;
+}
+
+.notifications i{
+    width: 40px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 0.8rem;
+    background-color: var(--bz-app-light);
+    color: var(--bz-app-focus);
+}
+
+.chatWindow{
+    background-image: url(../img/mine.jpg);
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
 }
