@@ -17,12 +17,9 @@ body{
     font-family: 'Roboto', sans-serif;
     width: 100vw;
     height: 100vh;
-}
-
-body {
     background: linear-gradient(
-      to bottom,
-      #009688 20%,
-      #DBDBD2 20% 80%
+        to bottom,
+        #009688 20%,
+        #DBDBD2 20% 80%
     );
 }
