@@ -11,6 +11,7 @@
     --bz-app-light: #E9EBEB;
     --bz-app-white: #FFFFFF;
     --bz-app-focus: #8EDAFC;
+    --bz-app-grey: grey;
 }
 
 body{
@@ -30,6 +31,10 @@ body{
     width: 70%;
 }
 
+.col-5{
+    background-color: var(--bz-app-principal);
+}
+
 .userProfile{
     height: 50px;
 }
@@ -39,13 +44,21 @@ img{
     aspect-ratio: 1 / 1;
 }
 
+.actions i{
+    color: var(--bz-app-grey);
+}
+
+.notifications{
+    background-color: var(--bz-app-focus);
+}
+
 .notifications i{
     width: 40px;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     text-align: center;
     padding-top: 0.8rem;
-    background-color: var(--bz-app-light);
+    background-color: rgba(255, 255, 255, 0.77);
     color: var(--bz-app-focus);
 }
 
