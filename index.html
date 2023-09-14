@@ -15,70 +15,79 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <div class="wrapper mt-3">
-        <div class="row">
-            <div class="col-5">
-                <div class="row flex-column">
-                    <div class="userProfile d-flex align-items-center justify-content-between">
-                        <div class="user">
-                            <img class="rounded-circle" src="./assets/img/avatar_io.jpg" alt="" srcset="">
-                            <small class="userName">Sofia</small>
+    
+    <div id="app">
+        <div class="wrapper mt-3">
+            <div class="row">
+                <div class="col-5">
+                    <div class="row flex-column">
+                        <div class="userProfile d-flex align-items-center justify-content-between">
+                            <div class="user">
+                                <img class="rounded-circle" src="./assets/img/avatar_io.jpg" alt="" srcset="">
+                                <small class="userName">Sofia</small>
+                            </div>
+                            <div class="actions">
+                                <i class="p-1 fa-xs fa-solid fa-circle-notch"></i>
+                                <i class="p-1 fa-xs fa-solid fa-message"></i>
+                                <i class="p-1 fa-xs fa-solid fa-ellipsis-vertical"></i>
+                            </div>
                         </div>
-                        <div class="actions">
-                            <i class="p-1 fa-xs fa-solid fa-circle-notch"></i>
-                            <i class="p-1 fa-xs fa-solid fa-message"></i>
-                            <i class="p-1 fa-xs fa-solid fa-ellipsis-vertical"></i>
+                        <div class="notifications d-flex align-items-center">
+                            <i class="fa-solid fa-bell-slash me-3 fa-l"></i>
+                            <div class="info">
+                                <small>Ricevi notifiche di nuovi messaggi</small> <br>
+                                <a href="#">Attiva notifiche desktop</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="notifications d-flex align-items-center">
-                        <i class="fa-solid fa-bell-slash me-3 fa-l"></i>
-                        <div class="info">
-                            <small>Ricevi notifiche di nuovi messaggi</small> <br>
-                            <a href="#">Attiva notifiche desktop</a>
+                        <div class="search input-group p-2 mt-2">
+                            <span class="input-group-text" id="m-glass">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="newChat" aria-describedby="m-glass">
                         </div>
-                    </div>
-                    <div class="search input-group p-2 mt-2">
-                        <span class="input-group-text" id="m-glass">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </span>
-                        <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="newChat" aria-describedby="m-glass">
-                    </div>
-                    <div class="chats">
-                        c
+                        <div class="chats">
+                            <div class="d-flex" v-for="(contact, index) in contacts" :key="id=index">
+                                <div class="chatInfo">
+                                    <img :src="contact.avatar" alt="">
+                                    <span>{{contact.name}}</span>
+                                    <span>Ultimo messaggio inviato</span>
+                                </div>
+                                <div class="lastMsg">
+                                    <span class="timeMsg">12:00</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-7 bg-success">
-                <div class="row flex-column align-items-center justify-content-between">
-                    <div class="userProfile d-flex align-items-center justify-content-between">
-                        <div class="user">
-                            <img class="rounded-circle" src="./assets/img/avatar_io.jpg" alt="" srcset="">
-                            <small class="userName">Sofia</small>
+                <div class="col-7 bg-success">
+                    <div class="row flex-column align-items-center justify-content-between">
+                        <div class="userProfile d-flex align-items-center justify-content-between">
+                            <div class="user">
+                                <img class="rounded-circle" src="./assets/img/avatar_io.jpg" alt="" srcset="">
+                                <small class="userName">Sofia</small>
+                            </div>
+                            <div class="actions">
+                                <i class="p-1 fa-xs fa-solid fa-circle-notch"></i>
+                                <i class="p-1 fa-xs fa-solid fa-message"></i>
+                                <i class="p-1 fa-xs fa-solid fa-ellipsis-vertical"></i>
+                            </div>
                         </div>
-                        <div class="actions">
-                            <i class="p-1 fa-xs fa-solid fa-circle-notch"></i>
-                            <i class="p-1 fa-xs fa-solid fa-message"></i>
-                            <i class="p-1 fa-xs fa-solid fa-ellipsis-vertical"></i>
+                        <div class="chatWindow">
+                            a
                         </div>
-                    </div>
-                    <div class="chatWindow">
-                        a
-                    </div>
-                    <div class="toWrite d-flex align-items-center justify-content-between">
-                        <i class="fa-solid fa-smile"></i>
-                        <input type="text" name="" id="">
-                        <div class="send">
-                            <i class="fa-regular fa-paper-plane"></i>
-                            <i class="fa-solid fa-microphone"></i>
+                        <div class="toWrite d-flex align-items-center justify-content-between">
+                            <i class="fa-solid fa-smile"></i>
+                            <input type="text" name="" id="">
+                            <div class="send">
+                                <i class="fa-regular fa-paper-plane"></i>
+                                <i class="fa-solid fa-microphone"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- <div id="app">
-        
-    </div> -->
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
