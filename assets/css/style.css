@@ -4,7 +4,16 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bz-app-principal: #DBDBD2;
+    --bz-app-header: #009688;
+    --bz-app-success: #D5F9BA;
+    --bz-app-light: #E9EBEB;
+    --bz-app-white: #FFFFFF;
+    --bz-app-focus: #8EDAFC;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
-    
+
 }
