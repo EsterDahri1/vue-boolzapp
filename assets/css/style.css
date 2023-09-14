@@ -23,3 +23,15 @@ body{
         #DBDBD2 20% 80%
     );
 }
+
+.wrapper{
+    max-width: 1220px;
+    margin: 30px auto;
+    width: 70%;
+}
+
+img{
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    margin: 0.5rem;
+}
