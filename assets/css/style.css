@@ -37,6 +37,7 @@ body{
 
 .userProfile{
     height: 50px;
+    background-color: var(--bz-app-principal);
 }
 
 img{
@@ -62,9 +63,39 @@ img{
     color: var(--bz-app-focus);
 }
 
+.chats{
+    background-color: var(--bz-app-white);
+}
+
 .chatWindow{
     background-image: url(../img/mine.jpg);
     background-position: center;
     object-fit: cover;
     background-repeat: no-repeat;
+}
+
+.messageSent{
+    background-color: var(--bz-app-success);
+}
+
+.messageReceived{
+    background-color: var(--bz-app-white);
+}
+
+.toWrite{
+    background-color: var(--bz-app-light);
+    color: var(--bz-app-grey);
+
+    && #smiley{
+        width: 5%;
+    };
+
+    && .send{
+        width: 15%;
+    }
+
+    && #writing{
+        width: 80%;
+    }
+
 }

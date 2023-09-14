@@ -45,11 +45,11 @@
                             </span>
                             <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="newChat" aria-describedby="m-glass">
                         </div>
-                        <div class="chats">
-                            <div class="d-flex" v-for="(contact, index) in contacts" :key="id=index">
+                        <div class="pt-3 chats">
+                            <div class="d-flex align-items-center justify-content-between" v-for="(contact, index) in contacts" :key="id=index">
                                 <div class="chatInfo">
-                                    <img :src="contact.avatar" alt="">
-                                    <span>{{contact.name}}</span>
+                                    <img class="rounded-circle" :src="contact.avatar" alt="">
+                                    <span class="cName">{{contact.name}}</span> <br>
                                     <span>Ultimo messaggio inviato</span>
                                 </div>
                                 <div class="lastMsg">
@@ -59,28 +59,31 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-7 bg-success">
+                <div class="col-7">
                     <div class="row flex-column align-items-center justify-content-between">
                         <div class="userProfile d-flex align-items-center justify-content-between">
                             <div class="user">
-                                <img class="rounded-circle" src="./assets/img/avatar_io.jpg" alt="" srcset="">
-                                <small class="userName">Sofia</small>
+                                <img class="rounded-circle" src="./assets/img/avatar_1.jpg" alt="" srcset="">
+                                <small class="userName">Michele</small>
                             </div>
                             <div class="actions">
-                                <i class="p-1 fa-xs fa-solid fa-circle-notch"></i>
-                                <i class="p-1 fa-xs fa-solid fa-message"></i>
+                                <i class="p-1 fa-xs fa-solid fa-magnifying-glass"></i>
+                                <i class="p-1 fa-xs fa-solid fa-paperclip"></i>
                                 <i class="p-1 fa-xs fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </div>
                         <div class="chatWindow">
-                            a
+                            <div class="col-6 mb-2">
+                                <div class="d-flex flex-column rounded-2"></div>
+                                <div class="whenSent d-flex justify-content-end"></div>
+                            </div>
                         </div>
                         <div class="toWrite d-flex align-items-center justify-content-between">
-                            <i class="fa-solid fa-smile"></i>
-                            <input type="text" name="" id="">
+                            <i id="smiley" class="fa-regular fa-face-smile fa-xs"></i>
+                            <input type="text" name="" id="writing">
                             <div class="send">
-                                <i class="fa-regular fa-paper-plane"></i>
-                                <i class="fa-solid fa-microphone"></i>
+                                <i class="ps-2 fa-solid fa-paper-plane fa-xs"></i>
+                                <i class="ps-2 fa-solid fa-microphone fa-xs"></i>
                             </div>
                         </div>
                     </div>
