@@ -117,6 +117,15 @@ img{
     overflow-y: scroll;
 }
 
+.whenSent{
+    font-size: 0.6rem;
+    color: rgba(128, 128, 128, 0.644);
+}
+
+.textMsg{
+    font-size: smaller;
+}
+
 .messageSent{
     margin-left: 50%;
 }
