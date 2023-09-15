@@ -92,6 +92,10 @@ img{
     background-color: var(--bz-app-light);
 }
 
+.error{
+    color: var(--bz-app-grey);
+}
+
 .chats{
     background-color: var(--bz-app-white);
     overflow-y: auto;
