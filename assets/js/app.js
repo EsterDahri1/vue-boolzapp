@@ -198,7 +198,8 @@ createApp({
     methods:{
         addActiveContact (index){
             this.activeContact = index;
-            console.log(this.activeContact);
+            
+            return `activeChat ${this.activeContact === index - 1 ? 'active' : ''}`
         }
     }
 }).mount('#app')
