@@ -92,7 +92,7 @@
                             <i id="smiley" class="fa-regular fa-face-smile fa-xs"></i>
                             <input v-model="msgToSend" @keyup.enter="addMsg" type="text" name="" id="writing" placeholder="Messaggio">
                             <div class="send">
-                                <i class="ps-3 fa-solid fa-paper-plane fa-xs"></i>
+                                <i @click="addMsg()" class="ps-3 fa-solid fa-paper-plane fa-xs"></i>
                                 <i class="ps-3 fa-solid fa-microphone fa-xs"></i>
                             </div>
                         </div>
