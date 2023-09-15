@@ -94,7 +94,7 @@ img{
 
 .chats{
     background-color: var(--bz-app-white);
-    overflow-y: scroll;
+    overflow-y: auto;
     flex-grow: 1;
 }
 
@@ -109,9 +109,9 @@ img{
 
 .chatWindow{
     background-image: url(../img/mine.jpg);
-    width:100%;
+    height: 100vh;
     flex-grow: 1;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .messageSent, .messageReceived{

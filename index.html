@@ -67,8 +67,8 @@
                     <div class="row flex-grow-3 flex-column align-items-center justify-content-between">
                         <div class="userProfile d-flex align-items-center justify-content-between">
                             <div class="user">
-                                <img class="rounded-circle" src="./assets/img/avatar_1.jpg" alt="" srcset="">
-                                <small class="contactWrote">Michele</small>
+                                <img class="rounded-circle" :src="contacts[activeContact].avatar" alt="avatar">
+                                <small class="contactWrote">{{contacts[activeContact].name}}</small>
                             </div>
                             <div class="actions">
                                 <i class="p-1 fa-xs fa-solid fa-magnifying-glass"></i>
