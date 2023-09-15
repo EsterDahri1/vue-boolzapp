@@ -222,7 +222,10 @@ createApp({
                 status: 'sent'
             }),
 
-                this.msgToSend = ''
+                this.msgToSend = '',
+
+                //per attivare la risposta in modod automatico uso il setTimeout method che ho trovato qua: https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
+                timeAutoResponse = setTimeout(this.autoResponse, 2000)
 
         },
 
