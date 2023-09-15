@@ -90,7 +90,7 @@
                         </div>
                         <div class="toWrite d-flex align-items-center justify-content-between">
                             <i id="smiley" class="fa-regular fa-face-smile fa-xs"></i>
-                            <input type="text" name="" id="writing">
+                            <input v-model="msgToSend" @keyup.enter="addMsg" type="text" name="" id="writing" placeholder="Messaggio">
                             <div class="send">
                                 <i class="ps-3 fa-solid fa-paper-plane fa-xs"></i>
                                 <i class="ps-3 fa-solid fa-microphone fa-xs"></i>

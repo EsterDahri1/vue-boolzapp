@@ -21,6 +21,9 @@ createApp({
             //aggiungo il contatto attivo per vedere i messsaggi 
             activeContact: 0,
 
+            //aggiungo stringa che contiene il messaggio del mio contatto
+            msgToSend: '',
+
             //aggiungo array di oggetti inviatoci
             contacts: [
                 {
@@ -200,6 +203,37 @@ createApp({
             this.activeContact = index;
             
             return `activeChat ${this.activeContact === index - 1 ? 'active' : ''}`
+        },
+
+        /*
+        Milestone 3
+        ● Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando
+        “enter” il testo viene aggiunto al thread sopra, come messaggio verde
+        ● Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà
+        un “ok” come risposta, che apparirà dopo 1 secondo.
+        */
+
+        addMsg() {
+            this.contacts[this.activeContact].messages.push({
+                //testo del nuovo messaggio che scrivo
+
+                date: '10/01/2020 15:51:00',
+                message: this.msgToSend,
+                status: 'sent'
+            }),
+
+                this.msgToSend = ''
+
+        },
+
+        autoResponse(){
+            this.contacts[this.activeContact].messages.push({
+                //testo della rispsota automatica
+                date: '10/01/2020 15:53:00',
+                message: 'Ok!',
+                status: 'received'
+            })
         }
+
     }
 }).mount('#app')
