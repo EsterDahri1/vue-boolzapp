@@ -249,17 +249,10 @@ createApp({
         },
 
         searchedContact() {
-           /* return this.contacts.filter(contact => {
-              // return true if the product should be visible
-      
-              // in this example we just check if the search string
-              // is a substring of the product name (case insensitive)
-              return contact.name.toLowerCase().indexOf(this.search.toLowerCase()) != -1;
-            });*/
-
-            this.contacts.filter(() => {
-                this.contacts.forEach(contact => contact.visible(this.contacts[index].name.toLowerCase().includes(this.search.toLowerCase())))
-            })
+           if(!this.search) return this.contacts
+           return this.contacts.filter(contact => {
+            return (contact.name.toLowerCase().includes(this.search.toLowerCase()))
+           })
         }
     },
 
