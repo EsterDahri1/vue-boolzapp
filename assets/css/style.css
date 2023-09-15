@@ -144,3 +144,9 @@ img{
     }
 
 }
+
+.active{
+    background-color: var(--bz-app-light);
+    width: 100%;
+    padding: 2px;
+}
