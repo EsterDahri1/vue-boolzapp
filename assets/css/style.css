@@ -16,12 +16,12 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: linear-gradient(
         to bottom,
-        #009688 20%,
-        #DBDBD2 20% 80%
+        #009688 15%,
+        #DBDBD2 15% 80%
     );
 }
 
@@ -45,6 +45,24 @@ img{
     aspect-ratio: 1 / 1;
 }
 
+.userName{
+    font-size: smaller;
+    padding-left: 0.5rem;
+}
+
+.info{
+    && small{
+        font-size: smaller;
+        padding: 0;
+        line-height: 0;
+    }
+
+    && a{
+        font-size: x-small;
+        color: var(--bz-app-grey);
+    }
+}
+
 .actions i{
     color: var(--bz-app-grey);
 }
@@ -63,15 +81,33 @@ img{
     color: var(--bz-app-focus);
 }
 
+.search{
+    background-color: var(--bz-app-light);
+}
+
 .chats{
     background-color: var(--bz-app-white);
+}
+
+.cNames{
+    font-size: smaller;
+}
+
+.lastMsgSent, .timeMsg{
+    font-size: x-small;
+    color: rgba(128, 128, 128, 0.644);
 }
 
 .chatWindow{
     background-image: url(../img/mine.jpg);
     background-position: center;
-    object-fit: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.messageSent, .messageReceived{
+    border-radius: 15px;
+    padding: 0.5rem;
 }
 
 .messageSent{

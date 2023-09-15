@@ -12,6 +12,11 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+
+            //aggiungo il contatto attivo per vedere i messsaggi 
+            activeContact: 0,
+
+            //aggiungo array di oggetti inviatoci
             contacts: [
                 {
                     name: 'Michele',
@@ -175,6 +180,13 @@ createApp({
                     ],
                 }
             ]
+        }
+    },
+
+    methods:{
+        addActiveContact (index){
+            this.activeContact = index;
+            console.log(this.activeContact);
         }
     }
 }).mount('#app')
