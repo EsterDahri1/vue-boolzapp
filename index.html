@@ -43,7 +43,7 @@
                             <span class="input-group-text" id="m-glass">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </span>
-                            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="newChat" aria-describedby="m-glass" v-model="search" @input="searchedContact()">
+                            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="newChat" aria-describedby="m-glass" v-model="search" @keyup.enter="searchedContact()">
                         </div>
                         <div class="pt-3 chats">
                             <div class="error d-none">⚠️ Non ci sono contatti con questo nome</div>
