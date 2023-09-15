@@ -113,16 +113,24 @@ img{
     overflow-y: scroll;
 }
 
-.messageSent, .messageReceived{
+.messageSent{
+    margin-left: 50%;
+}
+
+.messageReceived, .messageSent{
+    padding: 0 32px;
+}
+
+.sent, .received{
     border-radius: 15px;
     padding: 0.5rem;
 }
 
-.messageSent{
+.sent {
     background-color: var(--bz-app-success);
 }
 
-.messageReceived{
+.received{
     background-color: var(--bz-app-white);
 }
 
