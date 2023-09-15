@@ -12,6 +12,11 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            //aggiungo me info
+            me:{
+                name: 'Sofia',
+                avatar: './assets/img/avatar_io.jpg'
+            },
 
             //aggiungo il contatto attivo per vedere i messsaggi 
             activeContact: 0,
