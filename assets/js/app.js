@@ -24,6 +24,9 @@ createApp({
             //aggiungo stringa che contiene il messaggio del mio contatto
             msgToSend: '',
 
+            //aggiungo la mia ricerca
+            search: "",
+
             //aggiungo array di oggetti inviatoci
             contacts: [
                 {
@@ -238,13 +241,23 @@ createApp({
             })
         }
 
-    }
+    },
     /*
     Milestone 4
     ● Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i
     contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo
     “mar” rimangono solo Marco e Martina)   https://stackoverflow.com/questions/69287834/search-bar-vue-js
     */
-
+    computed: {
+        searchedContact(index) {
+          return this.contacts.filter(contact => {
+            // return true if the product should be visible
     
+            // in this example we just check if the search string
+            // is a substring of the product name (case insensitive)
+            return contact.name.toLowerCase().indexOf(this.search.toLowerCase()) != -1;
+          });
+        }
+    }
+
 }).mount('#app')

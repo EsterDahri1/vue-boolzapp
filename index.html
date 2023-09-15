@@ -41,9 +41,9 @@
                         </div>
                         <div class="search input-group p-2">
                             <span class="input-group-text" id="m-glass">
-                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-magnifying-glass" @click="searchedContacts(index)"></i>
                             </span>
-                            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="newChat" aria-describedby="m-glass">
+                            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="newChat" aria-describedby="m-glass" v-model="search">
                         </div>
                         <div class="pt-3 chats">
                             <div class="error">⚠️ Non ci sono contatti con questo nome</div>
