@@ -117,10 +117,6 @@ img{
     margin-left: 50%;
 }
 
-.messageReceived, .messageSent{
-    padding: 0 32px;
-}
-
 .sent, .received{
     border-radius: 15px;
     padding: 0.5rem;
