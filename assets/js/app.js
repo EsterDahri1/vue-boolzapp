@@ -252,7 +252,8 @@ createApp({
         searchContact(){
             //itero nell'array di oggetti con forEach
             this.contacts.forEach(function(item, index, contact){
-                
+                //imposto la condizioone se 
+                if(contact.visible == true) (this.contact[index].name.toLowerCase().includes(this.search.toLowerCase()))
             });
         }
     },
