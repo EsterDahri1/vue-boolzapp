@@ -44,7 +44,7 @@ createApp({
             msgToSend: '',
 
             //aggiungo la mia ricerca
-            search: "",
+            search: '',
 
             //aggiungo array di oggetti inviatoci
             contacts: [
@@ -248,6 +248,16 @@ createApp({
                 status: 'received'
             })
         },
+
+        findContact(){
+            this.contacts.forEach((contact, index) => {
+               if(this.contacts[index].name.toLowerCase().includes(this.search.toLowerCase())) {
+                this.contacts[index].visible = true
+               }else{
+                this.contacts[index].visible = false
+               }
+            })
+        }
     },
 
 }).mount('#app')
