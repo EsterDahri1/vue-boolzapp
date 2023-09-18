@@ -76,6 +76,7 @@ img{
 
 .notifications{
     background-color: var(--bz-app-focus);
+    padding: 8px 16px;
 }
 
 .notifications i{
@@ -88,6 +89,10 @@ img{
     color: var(--bz-app-focus);
 }
 
+#searchContact{
+    font-size: 10px;
+}
+
 .search{
     background-color: var(--bz-app-light);
 }
@@ -98,8 +103,7 @@ img{
 
 .chats{
     background-color: var(--bz-app-white);
-    overflow-y: auto;
-    flex-grow: 1;
+    overflow-y: scroll;
 }
 
 .cNames{
@@ -146,17 +150,25 @@ img{
 .toWrite{
     background-color: var(--bz-app-light);
     color: var(--bz-app-grey);
+    padding: 0.5rem 0;
 
     & #smiley{
-        width: 5%;
+        width: 10%;
+        font-size: larger;
+        text-align: center;
     };
 
     & .send{
         width: 15%;
-    }
+        font-size: large;
+    };
 
     & #writing{
-        width: 80%;
+        width: 75%;
+        font-size: 10px;
+        padding: 8px;
+        border-radius: 5px;
+        border: none;
     }
 
 }
