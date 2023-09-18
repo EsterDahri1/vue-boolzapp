@@ -41,7 +41,7 @@
                         </div>
                         <div class="search input-group p-2">
                             <span class="input-group-text border-0 bg-white rounded-0" id="m-glass">
-                                <i id="mGlass" class="fa-solid fa-magnifying-glass fa-xs"></i>
+                                <i id="mGlass" class="fa-solid fa-magnifying-glass fa-xs ps-3 pe-3"></i>
                             </span>
                             <input type="text" id="searchContact" class="form-control border-0 rounded-0" placeholder="Cerca o inizia una nuova chat" aria-label="newChat" aria-describedby="m-glass" v-model="searchContact()">
                         </div>
@@ -92,8 +92,8 @@
                             <i id="smiley" class="fa-regular fa-face-smile fa-xs"></i>
                             <input v-model="msgToSend" @keyup.enter="addMsg" type="text" name="" id="writing" placeholder="Messaggio">
                             <div class="send">
-                                <i @click="addMsg()" class="ps-3 fa-solid fa-paper-plane fa-xs"></i>
-                                <i class="ps-3 fa-solid fa-microphone fa-xs"></i>
+                                <i @click="addMsg()" class="ps-3 fa-solid fa-paper-plane fa-small"></i>
+                                <i class="ps-3 fa-solid fa-microphone fa-small"></i>
                             </div>
                         </div>
                     </div>
