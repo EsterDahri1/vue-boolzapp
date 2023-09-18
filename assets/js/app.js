@@ -217,10 +217,10 @@ createApp({
     
     */
 
-    methods:{
-        addActiveContact (index){
+    methods: {
+        addActiveContact(index) {
             this.activeContact = index;
-            
+
             return `activeChat ${this.activeContact === index - 1 ? 'active' : ''}`
         },
 
@@ -240,7 +240,7 @@ createApp({
 
         },
 
-        autoResponse(){
+        autoResponse() {
             this.contacts[this.activeContact].messages.push({
                 //testo della rispsota automatica
                 date: '10/01/2020 15:53:00',
@@ -249,14 +249,19 @@ createApp({
             })
         },
 
-        findContact(){
+        findContact() {
             this.contacts.forEach((contact, index) => {
-               if(this.contacts[index].name.toLowerCase().includes(this.search.toLowerCase())) {
-                this.contacts[index].visible = true
-               }else{
-                this.contacts[index].visible = false
-               }
+                if (this.contacts[index].name.toLowerCase().includes(this.search.toLowerCase())) {
+                    this.contacts[index].visible = true
+                } else {
+                    this.contacts[index].visible = false
+                }
             })
+        },
+
+        //aggiungo funzione per togliere messaggio
+        deleteMsg(){
+            this.contacts.splice([this.contactActive],1)
         }
     },
 
