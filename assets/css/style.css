@@ -1,3 +1,5 @@
+/* Common */
+
 *{
     margin: 0;
     padding: 0;
@@ -25,6 +27,14 @@ body{
     );
 }
 
+/*Utilities*/
+
+.active{
+    background-color: var(--bz-app-light);
+    width: 100%;
+    padding: 2px;
+}
+
 .flex-grow-3{
     flex-grow: 3;
 }
@@ -38,6 +48,8 @@ body{
     margin: 30px auto;
     width: 70%;
 }
+
+/*Left side*/
 
 .col-5{
     background-color: var(--bz-app-principal);
@@ -102,9 +114,10 @@ img{
     background-color: var(--bz-app-bg-search);
 }
 
-.error{
-    color: var(--bz-app-grey);
-}
+/*End region left side*/
+
+
+/*Right side*/
 
 .chats{
     background-color: var(--bz-app-white);
@@ -177,8 +190,4 @@ img{
 
 }
 
-.active{
-    background-color: var(--bz-app-light);
-    width: 100%;
-    padding: 2px;
-}
+/*End region right side*/
