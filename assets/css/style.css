@@ -114,11 +114,6 @@ img{
     background-color: var(--bz-app-bg-search);
 }
 
-/*End region left side*/
-
-
-/*Right side*/
-
 .chats{
     background-color: var(--bz-app-white);
     overflow-y: scroll;
@@ -126,6 +121,14 @@ img{
 
 .cNames{
     font-size: smaller;
+}
+/*End region left side*/
+
+
+/*Right side*/
+.lastAccess{
+    font-size: 10px;
+    color: var(--bz-app-grey);
 }
 
 .lastMsgSent, .timeMsg{
