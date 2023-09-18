@@ -250,8 +250,9 @@ createApp({
         },
 
         searchContact(){
-            this.contacts.forEach(function(visible){
-                console.log(visible);
+            //itero nell'array di oggetti con forEach
+            this.contacts.forEach(function(item, index, contact){
+                
             });
         }
     },
