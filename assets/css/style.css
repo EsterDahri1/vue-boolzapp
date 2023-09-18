@@ -11,7 +11,8 @@
     --bz-app-light: #E9EBEB;
     --bz-app-white: #FFFFFF;
     --bz-app-focus: #8EDAFC;
-    --bz-app-grey: grey;
+    --bz-app-grey: #b1b1b1;
+    --bz-app-bg-search: #fafafa;
 }
 
 body{
@@ -93,8 +94,12 @@ img{
     font-size: 10px;
 }
 
+#mGlass{
+    color: var(--bz-app-grey);
+}
+
 .search{
-    background-color: var(--bz-app-light);
+    background-color: var(--bz-app-bg-search);
 }
 
 .error{

@@ -27,9 +27,9 @@
                                 <small class="userName">{{me.name}}</small>
                             </div>
                             <div class="actions">
-                                <i class="p-1 fa-xs fa-solid fa-circle-notch"></i>
-                                <i class="p-1 fa-xs fa-solid fa-message"></i>
-                                <i class="p-1 fa-xs fa-solid fa-ellipsis-vertical"></i>
+                                <i class="ps-3 fa-small fa-solid fa-circle-notch"></i>
+                                <i class="ps-3 fa-small fa-solid fa-message"></i>
+                                <i class="ps-3 fa-small fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </div>
                         <div class="notifications accordion-item d-flex align-items-center">
@@ -40,12 +40,12 @@
                             </div>
                         </div>
                         <div class="search input-group p-2">
-                            <span class="input-group-text" id="m-glass">
-                                <i class="fa-solid fa-magnifying-glass"></i>
+                            <span class="input-group-text border-0 bg-white rounded-0" id="m-glass">
+                                <i id="mGlass" class="fa-solid fa-magnifying-glass fa-xs"></i>
                             </span>
-                            <input type="text" id="searchContact" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="newChat" aria-describedby="m-glass" v-model="searchContact()">
+                            <input type="text" id="searchContact" class="form-control border-0 rounded-0" placeholder="Cerca o inizia una nuova chat" aria-label="newChat" aria-describedby="m-glass" v-model="searchContact()">
                         </div>
-                        <div style="height: 438px;" class="p-2 pt-3 chats">
+                        <div style="height: 438px;" class="chats">
                             <div class="p-2 mb-3 d-flex align-items-center justify-content-between" v-for="(contact, index) in contacts" :key="id=index" :class="index === activeContact ? 'active' : ''" @click="addActiveContact(index)">
                                 <div class="chatInfo d-flex align-items-center justify-content-start" :class="index === activeContact ? 'active' : ''">
                                     <img class="rounded-circle" :src="contact.avatar" alt="">
@@ -71,12 +71,12 @@
                                 <small class="contactWrote">{{contacts[activeContact].name}}</small>
                             </div>
                             <div class="actions">
-                                <i class="p-1 fa-xs fa-solid fa-magnifying-glass"></i>
-                                <i class="p-1 fa-xs fa-solid fa-paperclip"></i>
-                                <i class="p-1 fa-xs fa-solid fa-ellipsis-vertical"></i>
+                                <i class="ps-3 fa-small fa-solid fa-magnifying-glass"></i>
+                                <i class="ps-3 fa-small fa-solid fa-paperclip"></i>
+                                <i class="ps-3 fa-small fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </div>
-                        <div style="height: 495px;" class="chatWindow pt-3 pb-2 d-flex flex-column">
+                        <div style="height: 493px;" class="chatWindow pt-3 pb-2 d-flex flex-column">
                             <div class="col-6 mb-2" v-for="(message, index) in contacts[activeContact].messages" :class="message.status === 'sent' ? 'messageSent' : 'messageReceived'">
                                 <div class="d-flex flex-column" :class="message.status === 'sent' ? 'sent' : 'received'">
                                     <div class="pt-2 ps-2 textMsg">
