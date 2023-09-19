@@ -22,7 +22,7 @@ contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> 
 
 Milestone 5
 ● Cancella messaggio: cliccando sul messaggio appare un menu a tendina che
-permette di cancellare il messaggio selezionato
+permette di cancellare il messaggio selezionato ✔️
 ● Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti
 */
 
@@ -260,8 +260,10 @@ createApp({
         },
 
         //aggiungo funzione per togliere messaggio
-        deleteMsg(){
-            this.contacts.splice([this.contactActive],1)
+        deleteMsg(message, index){
+            console.log(message, index);
+
+            this.contacts[this.contactActive].messages.splice(index, 1)
         }
     },
 
