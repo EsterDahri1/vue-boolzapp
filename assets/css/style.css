@@ -168,6 +168,12 @@ img{
     background-color: var(--bz-app-white);
 }
 
+#msgOptions{
+    border: none;
+    color: var(--bz-app-grey);
+    background-color: transparent;
+}
+
 .toWrite{
     background-color: var(--bz-app-light);
     color: var(--bz-app-grey);
